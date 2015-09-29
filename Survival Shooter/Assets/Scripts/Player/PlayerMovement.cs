@@ -11,7 +11,8 @@ public class PlayerMovement : MonoBehaviour
 	private Rigidbody rigidbody; // Reference to the player's Rigidbody component.
 	private Animator animator;  // Reference to the player's Animator component.
 
-	void Awake(){
+	void Awake ()
+	{
 		// Create a layer mask for the floor layer.	
 		this.floorMark = LayerMask.GetMask ("Floor");
 
@@ -20,7 +21,8 @@ public class PlayerMovement : MonoBehaviour
 		this.animator = this.GetComponent<Animator> ();
 	}
 
-	void FixedUpdate(){
+	void FixedUpdate ()
+	{
 		// Store the input axes.
 		float horizontal = Input.GetAxis ("Horizontal");
 		float vertical = Input.GetAxis ("Vertical");
@@ -34,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
 	/**
 	 * Move the player around the scene.
 	 */
-	private void MovePlayer(float horizontal, float vertical){
+	private void MovePlayer (float horizontal, float vertical)
+	{
 		// Set the movement vector based on the axis input.
 		this.movement.Set (horizontal, 0f, vertical);
 		// Normalise the movement vector and make it proportional to the speed per second.
@@ -46,7 +49,8 @@ public class PlayerMovement : MonoBehaviour
 	/**
 	 * Turn the player to face the mouse cursor.
 	 */
-	private void TurnPlayer(){
+	private void TurnPlayer ()
+	{
 		// Create a ray from the mouse cursor on screen in the direction of the camera.
 		Ray camRay = Camera.main.ScreenPointToRay (Input.mousePosition);
 		RaycastHit floorHit; // Create a RaycastHit variable to store information about what was hit by the ray.
@@ -58,16 +62,17 @@ public class PlayerMovement : MonoBehaviour
 			// Ensure the vector is entirely along the floor plane.
 			playerToMouse.y = 0f;
 			// Create a quaternion (rotation) based on looking down the vector from the player to the mouse.
-			Quaternion newPlayerRotation = Quaternion.LookRotation(playerToMouse);
+			Quaternion newPlayerRotation = Quaternion.LookRotation (playerToMouse);
 			// Set the player's rotation to this new rotation.
-			this.rigidbody.MoveRotation(newPlayerRotation);
+			this.rigidbody.MoveRotation (newPlayerRotation);
 		}
 	}
 
 	/**
 	 * Animate the player.
 	 */
-	private void AnimatePlayer(float horizontal, float vertical){
+	private void AnimatePlayer (float horizontal, float vertical)
+	{
 		// Create a boolean that is true if either of the input axes is non-zero.
 		bool isWalking = horizontal != 0f || vertical != 0f;
 		// Tell the animator whether or not the player is walking by set "IsWalking" parameter
