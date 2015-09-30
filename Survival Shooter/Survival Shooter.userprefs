@@ -1,12 +1,14 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Enemy\EnemyAttack.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Managers\EnemyManager.cs">
     <Files>
       <File FileName="Assets\Scripts\Player\PlayerShooting.cs" Line="90" Column="57" />
-      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="61" Column="42" />
-      <File FileName="Assets\Scripts\Enemy\EnemyMovement.cs" Line="19" Column="2" />
-      <File FileName="Assets\Scripts\Enemy\EnemyHealth.cs" Line="71" Column="49" />
+      <File FileName="Assets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\EnemyMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Enemy\EnemyHealth.cs" Line="25" Column="55" />
       <File FileName="Assets\Scripts\Enemy\EnemyAttack.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Managers\ScoreManager.cs" Line="20" Column="16" />
+      <File FileName="Assets\Scripts\Managers\EnemyManager.cs" Line="17" Column="15" />
     </Files>
     <Pads>
       <Pad Id="ClassPad">
@@ -15,9 +17,7 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="D:\___Dev\GitHub\unity-projects\survival-shooter\Survival Shooter\Assets\Scripts\Enemy\EnemyAttack.cs" line="29" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
